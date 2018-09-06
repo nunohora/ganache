@@ -202,7 +202,11 @@ class TopNavbar extends Component {
                 <Spinner />
               </OnlyIf>
             </StatusIndicator>
-            <button onClick={() => this.props.dispatch(push('/workspace_settings'))}>Workspace Settings</button>
+            <StatusIndicator>
+              <button onClick={() => this.props.dispatch(push('/workspace_settings'))}>
+                <SettingsIcon style={{ height: '100%' }} />
+              </button>
+            </StatusIndicator>
           </div>
           <div className="Actions">
             <OnlyIf test={isLogsPage}>
