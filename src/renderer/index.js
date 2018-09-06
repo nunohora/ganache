@@ -23,6 +23,7 @@ import NotFoundScreen from './screens/not-found/NotFoundScreen'
 import TitleScreen from './screens/title/TitleScreen'
 import WorkspacesScreen from './screens/startup/WorkspacesScreen'
 import FirstRunScreen from './screens/first-run/FirstRunScreen'
+import WorkspaceSettingsScreen from './screens/workspace-settings/WorkspaceSettingsScreen'
 
 import {ipcRenderer} from 'electron'
 
@@ -42,7 +43,8 @@ const routes = <Route>
     <Route path="/transactions(/:transactionHash)" component={TransactionsScreen} />
     <Route path="/logs" component={LogsScreen} />
     <Route path="/notfound" component={NotFoundScreen} />
-    <Route path='/config(/:activeTab)' component={ConfigScreen} /> 
+    <Route path='/config(/:activeTab)' component={ConfigScreen} />
+    <Route path='/workspace_settings' component={WorkspaceSettingsScreen} />
   </Route>
 </Route>
 

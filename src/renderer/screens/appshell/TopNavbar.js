@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import { push } from 'react-router-redux'
 
 import connect from '../helpers/connect'
 import * as Search from '../../../common/redux/search/actions'
@@ -201,6 +202,7 @@ class TopNavbar extends Component {
                 <Spinner />
               </OnlyIf>
             </StatusIndicator>
+            <button onClick={() => this.props.dispatch(push('/workspace_settings'))}>Workspace Settings</button>
           </div>
           <div className="Actions">
             <OnlyIf test={isLogsPage}>
