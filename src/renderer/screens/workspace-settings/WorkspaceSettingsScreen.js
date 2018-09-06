@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import connect from '../helpers/connect'
 
 class WorkspaceSettingsScreen extends Component {
   constructor () {
@@ -6,6 +7,7 @@ class WorkspaceSettingsScreen extends Component {
   }
 
   render () {
+    console.log(this.props)
     return (
       <div className="WorkspaceSettingsScreen">
         <main>
@@ -16,4 +18,4 @@ class WorkspaceSettingsScreen extends Component {
   }
 }
 
-export default WorkspaceSettingsScreen
+export default connect(WorkspaceSettingsScreen, "core", "workspaces")
