@@ -1,0 +1,31 @@
+.WorkspaceSettingsNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 24px 6px;
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.05) 90%, rgba(0, 0, 0, 0.15) 100%);
+
+  .tab-list {
+    display: flex;
+    text-transform: uppercase;
+    color: var(--text-color);
+
+    > div {
+      margin: 12px;
+      cursor: pointer;
+    }
+
+    > .active {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+    }
+  }
+
+  .button-list {
+    display: flex;
+
+    & > * {
+      margin: 12px;
+    }
+  }
+}

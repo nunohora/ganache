@@ -1,21 +1,30 @@
-import React, { Component } from 'react'
-import connect from '../helpers/connect'
+import React, { Component } from "react"
+import connect from "../helpers/connect"
+
+import Navbar from "./Navbar"
+import Workspace from "./Workspace"
 
 class WorkspaceSettingsScreen extends Component {
-  constructor () {
+  constructor() {
     super()
   }
 
-  render () {
-    console.log(this.props)
+  render() {
+    const settings = this.props.config.settings.workspace
     return (
       <div className="WorkspaceSettingsScreen">
-        <main>
+        <Navbar />
+        <div className="content">
+          <Workspace />
           <h1>Hi there!</h1>
-        </main>
+          <pre>{JSON.stringify(settings, null, 4)}</pre>
+        </div>
       </div>
     )
   }
 }
 
-export default connect(WorkspaceSettingsScreen, "core", "workspaces")
+export default connect(
+  WorkspaceSettingsScreen,
+  "config"
+)

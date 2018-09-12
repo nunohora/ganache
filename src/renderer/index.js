@@ -44,8 +44,8 @@ const routes = <Route>
     <Route path="/logs" component={LogsScreen} />
     <Route path="/notfound" component={NotFoundScreen} />
     <Route path='/config(/:activeTab)' component={ConfigScreen} />
-    <Route path='/workspace_settings' component={WorkspaceSettingsScreen} />
   </Route>
+  <Route path='/workspace_settings' component={WorkspaceSettingsScreen} />
 </Route>
 
 ipcRenderer.on('navigate', (event, path) => {
@@ -91,7 +91,9 @@ const stylesheets = [
   "./screens/logs/LogsScreen.scss",
   "./screens/logs/LogContainer.scss",
   "./screens/config/ConfigScreen.scss",
-  "./screens/not-found/NotFoundScreen.scss"
+  "./screens/not-found/NotFoundScreen.scss",
+  "./screens/workspace-settings/Navbar.scss",
+  "./screens/workspace-settings/WorkspaceSettingsScreen.scss"
 ] 
 
 const render = () => {
